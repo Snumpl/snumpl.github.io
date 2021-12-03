@@ -1,0 +1,560 @@
+body{
+   font-family: Arial, sans-serif;
+}
+
+nav{
+   width: 100%;
+   height: 60px;
+   background: #344051;
+}
+
+.logo{
+   color: #fff;
+   font-size: 23px;
+   line-height: 60px;
+   padding-left: 387px;
+   float: left;
+}
+
+.menu{
+   float: left;
+   padding-left: 432px;
+}
+
+.menu li{
+   float: left;
+   font-size: 12px;
+   line-height: 60px;
+   margin-right: 40px;
+   color: #fff;
+   text-transform: uppercase;
+}
+
+.main{
+   width: 100%;
+   height: calc(100% - 60px);
+   background:url(../img/paren_117.png) 90% 100%/auto 95% no-repeat ,url(../img/fon_115.jpg) center/cover no-repeat;
+}
+
+.title__container{
+   float: left;
+   margin: 17% 0% 0% 18%;
+   color: #2c384a;
+   text-align: center;
+}
+
+.title__container h1{
+   font-size: 60px;
+   font-weight: bold;
+}
+
+.title__container p{
+   font-size: 20px;
+   margin-top: 29px;
+   color: #79818d;
+}
+.title__container input{
+   height: 40px;
+   text-align: center;
+   border: 2px solid #6d7682;
+   background: none;
+   border-radius: 5px;
+   color: 6d7682;
+   font-size: 13px;
+   padding: 0px 15px;
+   margin: 55px 14px 0px 14px;
+}
+
+.aboutme__container{
+   width: 100%;
+   background: #fff;
+   float: left;
+}
+
+.aboutme__container h2{
+   font-weight: bold;
+   text-align: center;
+   margin-top: 108px;
+   font-size: 33px;
+   color: #263244;
+}
+
+.line{
+   width: 72px; 
+   height: 4px; 
+   margin: 30px auto;
+   background-color: #d17700; 
+}
+
+.aboutme__my-photo{
+   display: block;
+   margin: 59px auto 22px auto;
+}
+
+.aboutme__container p{
+   text-align: left;
+   width: 736px;
+   margin: 0px auto;
+   margin-bottom: 10px;
+   font-size: 17px;
+   color: #3f495a;
+}
+
+.aboutme__submit {
+   width: 154px;
+   height: 34px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 33px auto 111px auto;
+   border: 2px solid #6f707e;
+   border-radius: 6px;
+}
+.aboutme__submit img {
+   width: 15px;
+   height: 14px;
+   float: left;
+}
+
+.aboutme__submit input {
+   background: none;
+   font-size: 13px;
+   color: #6f707e;
+   float: left;
+}
+
+.skills__container {
+   float: left;
+   width: 100%;
+   background: url(../img/kartinka_fona_60.jpg) center/cover no-repeat;
+}
+
+.skills__container h2 {
+   font-weight: bold;
+   text-align: center;
+   font-size: 33px;
+   color: #263244;
+   margin-top: 107px;
+}
+
+.skills__item {
+   display: flex;
+   justify-content: center;
+   margin-top: 100px;
+}
+
+.icon1 {
+   width: 55px;
+   height: 37px;
+}
+
+.icon2 {
+   width: 51px;
+   height: 40px;
+}
+
+.icon3 {
+   width: 47px;
+   height: 47px;
+}
+
+
+.icon4 {
+   width: 51px;
+   height: 44px;
+}
+
+.skills {
+   margin-bottom: 92px;
+   width: 240px;
+   margin-right: 40px;
+   text-align: center;
+}
+
+.skills h4 {
+   margin-top: 34px;
+   margin-bottom: 15px;
+   border: 1px solid rgba(255,255,255,0.18);
+   font-size: 18px;
+   color: #cf7600;
+}
+
+.skills p {
+   font-size: 16px;
+   color: #3f495a; 
+}
+
+.cases__container {
+   background: white;
+   width: 100%;
+   float: left;
+}
+
+.cases__container h2 {
+   font-weight: bold;
+   text-align: center;
+   font-size: 33px;
+   color: #384354;
+   margin-top: 103px;
+}
+
+.cases__text {
+   text-align: center;
+   font-size: 16px;
+   color: #3f495a;
+   margin: 35px 0px;
+}
+
+.cases__img {
+   text-align: center;
+}
+
+.client {
+   display: flex;
+   justify-content: center;
+   margin: 35px auto;
+}
+.cases__client h4{
+   font-size: 20px;
+   color: #384354;
+   margin-top: 11px;
+   margin-bottom: 11px;
+   margin-right: 150px;
+}
+
+.cases__client p {
+   font-size: 15px;
+   color: #3f495a;
+   text-align: left;
+}
+
+.cases__name-project h4{
+   font-size: 20px;
+   color: #384354;
+   margin-top: 11px;
+   margin-bottom: 11px;
+}
+
+.text__name-project {
+   font-size: 15px;
+   color: #3f495a;
+   width: 920px;
+}
+
+.cases__container input{
+   background: #63b5ae;
+   border: 1px solid #63b5ae;
+   border-radius: 5px;
+   font-size: 16px;
+   color: white;
+   float: left;
+   padding: 15px 42px;
+   margin-left: 185px;
+   margin-bottom: 200px;
+   text-transform: uppercase;
+}
+
+.cost-calculation__container {
+   background-color: white;
+   text-align: center;
+}
+
+.cost-calculation__container h2 {
+   font-weight: bold;
+   font-size: 45px;
+   color: #1c2534;
+   margin-bottom: 54px;
+   text-align: center;
+}
+
+.cost-calculation__container h3 {
+   font-weight: bold;
+   text-transform: uppercase;
+   font-size: 25px;
+   color: #1c2534;
+   text-align: justify;
+   margin-left: 408px;
+   margin-top: 44px;
+   margin-bottom: 22px;
+}
+
+.cost-calculation__container select {
+   background: #eeeeee;
+   width: 711px;
+   height: 57px;
+}
+
+hr {
+   background:#d1d1d1;
+   width: 710px;
+   height: 2px;
+   margin: 30px auto;
+}
+
+.timing {
+   font-weight: bold;
+   font-size: 15px;
+   color: black;
+   text-align: justify;
+   margin-left: 408px;
+   word-spacing: 645px;
+}
+
+.cost {
+   margin-top: 10px;
+   margin-bottom: 150px;
+   font-weight: bold;
+   font-size: 15px;
+   color: black;
+   text-align: justify;
+   margin-left: 408px;
+   word-spacing: 610px;
+}
+
+.statistics__container {
+   width: 100%;
+   background: url(../img/fon_150.jpg) center/cover no-repeat;
+   padding-bottom: 90px;
+}
+
+.statistics__container h2 {
+   font-weight: bold;
+   font-size: 33px;
+   color: #323e4f;
+   text-align: center;
+   padding-top: 103px;
+}
+
+.stats {
+   display: flex;
+   justify-content: center;
+   margin-top: 84px;
+}
+
+.stats__item {
+   text-align: center;
+   width: 280px;
+}
+
+.stats__item h4 {
+   font-weight: bold;
+   font-size: 37px;
+   color: #323e4f;
+   margin-top: 34px;
+   margin-bottom: 42px;
+}
+
+.stats__item p {
+   font-weight: bold;
+   font-size: 16px;
+   color: #616a78;
+}
+
+.icon21 {
+   width: 53px;
+   height: 52px;
+}
+
+.icon22 {
+   width: 63px;
+   height: 47px;
+}
+
+.icon23 {
+   width: 57px;
+   height: 48px;
+}
+
+.icon24 {
+   width: 57px;
+   height: 52px;
+}
+
+.reviews__container {
+   width: 100%;
+   margin-top: 117px;
+   margin-bottom: 180px;
+}
+
+.reviews__container h2 {
+   text-align: center;
+   font-size: 33px;
+   color: #243042;
+   font-weight: bold;
+}
+
+.reviews1 img {
+   display: block;
+   margin: 50px auto 34px auto;
+}
+
+.reviews1 p {
+   text-align: center;
+   width: 687px;
+   margin: 33px auto;
+   color: #243042;
+}
+
+.reviews1 address {
+   font-size: 16px;
+   color: #243042;
+   font-weight: 400;
+   text-align: center;
+   width: 687px;
+   margin: 33px auto;
+}
+
+.reviews1 span {
+   font-weight: bold;
+}
+
+.contacts__container {
+   padding-bottom: 66px;
+   background: url(../img/fon_180.jpg) center/cover no-repeat;
+}
+
+.contacts__container h2 {
+   padding-top: 105px;
+   text-align: center;
+   font-size: 33px;
+   color: #fff;
+   font-weight: bold;
+}
+
+.text__contacts {
+   margin: 34px auto 47px auto;
+   text-align: center;
+   font-family: Calibri;
+   font-size: 16px;
+   color: #ffffff;
+}
+
+.contacts__item {
+   display: flex;
+   justify-content: center;
+}
+
+.contact {
+   text-align: center;
+   width: 200px;
+}
+
+.contact p {
+   font-size: 13px;
+   color: #ffffff;
+}
+
+.contacts__container h3 {
+   font-weight: bold;
+   font-size: 20px;
+   color: #ffffff;
+   text-align: center;
+   margin: 57px auto 47px auto;
+}
+
+.message {
+   text-align: center;
+   margin: 43px auto 28px auto;
+}
+
+#name {
+   width: 352px;
+   height: 34px;
+   margin-right: 25px;
+   margin-bottom: 14px;
+}
+
+#email {
+   width: 352px;
+   height: 34px;
+}
+
+#message__field {
+   margin: 0px auto;
+   margin-bottom: 28px;
+   width: 733px;
+   height: 94px;
+}
+
+#submit__message {
+   height: 46px;
+   width: 125px;
+   border: 2px solid #fff;
+   border-radius: 5px;
+   color: white;
+   font-size: 20px;
+   background: none;
+}
+
+.social-networks {
+   padding-top: 75px;
+   margin-bottom: 30px;
+}
+
+.social-networks li{
+   float: left;
+   display: block;
+   margin-right: 58px;
+}
+
+.social-icons-fasebook {
+   display: block;
+   background: url(../img/fb_200.png) center/cover no-repeat;
+   width: 16px;
+   height: 29px;
+   margin-left: 543px;
+}
+
+.social-icons-twitter {
+   display: block;
+   background: url(../img/tviter_201.png) center/cover no-repeat;
+   width: 25px;
+   height: 23px;
+}
+
+.social-icons-dribbble {
+   display: block;
+   background: url(../img/myach_202.png) center/cover no-repeat;
+   width: 27px;
+   height: 27px;
+}
+
+.social-icons-github {
+   display: block;
+   background: url(../img/kisa_203.png) center/cover no-repeat;
+   width: 27px;
+   height: 27px;
+}
+
+.social-icons-instagram {
+   display: block;
+   background: url(../img/inst_204.png) center/cover no-repeat;
+   width: 27px;
+   height: 27px;
+}
+
+.social-icons-LinkedIn {
+   display: block;
+   background: url(../img/in_205.png) center/cover no-repeat;
+   width: 27px;
+   height: 26px;
+}
+
+.maps__conteiner {
+   height: 350px;
+   background: url(../img/karta_kopiya_142.jpg) no-repeat;
+}
+
+footer {
+   background: #354051;
+   width: 100%;
+   height: 96px;
+}
+
+.avtor__container {
+   line-height: 96px;
+   font-family: Arial;
+   font-size: 13.px;
+   color: #fff;
+   text-align: center;
+}
