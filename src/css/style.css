@@ -2,10 +2,16 @@ body{
    font-family: Arial, sans-serif;
 }
 
+main {
+   width: 100%;
+   height: 100%;
+}
+
 nav{
    width: 100%;
    height: 60px;
    background: #344051;
+   position: fixed;
 }
 
 .logo{
@@ -14,6 +20,19 @@ nav{
    line-height: 60px;
    padding-left: 387px;
    float: left;
+   -webkit-animation: comming 2s;
+   -o-animation: comming 2s;
+   animation: comming 2s;
+   
+}
+
+@keyframes comming{
+   from{
+      opacity: 0;
+   }
+   to{
+      opacity: 100%;
+   }
 }
 
 .menu{
@@ -28,11 +47,63 @@ nav{
    margin-right: 40px;
    color: #fff;
    text-transform: uppercase;
+   -webkit-animation: topshift 0.4s forwards;
+   -o-animation: topshift 0.4s forwards;
+   animation: topshift 0.4s forwards;
+   opacity: 0;
 }
 
+.menu li a{
+   transition: all 0.1s;
+   color: white;
+   display: inline-block;
+}
+
+.menu li a:visited{
+   color: white;
+}
+
+.menu li a:hover{
+   color: #d17700;
+}
+
+.menu li a:active{
+   transform: scale(1.1);
+}
+
+@keyframes topshift{
+   from{
+      opacity: 0;
+      margin-top: -80px;
+   }
+   to{
+      opacity: 100%;
+      margin-top: 0px;
+   }
+}
+
+.menu li:nth-child(2){
+   animation-delay: 0.4s;
+}
+
+.menu li:nth-child(3){
+   animation-delay: 0.8s;
+}
+
+.menu li:nth-child(4){
+   animation-delay: 1.2s;
+}
+
+.menu li:nth-child(5){
+   animation-delay: 1.6s;
+}
+
+.menu li:nth-child(6){
+   animation-delay: 2s;
+}
 .main{
    width: 100%;
-   height: calc(100% - 60px);
+   height: 100%;
    background:url(../img/paren_117.png) 90% 100%/auto 95% no-repeat ,url(../img/fon_115.jpg) center/cover no-repeat;
 }
 
@@ -41,6 +112,13 @@ nav{
    margin: 17% 0% 0% 18%;
    color: #2c384a;
    text-align: center;
+   -webkit-animation: titlemove 1.5s ease forwards;
+   -o-animation: titlemove 1.5s ease forwards;
+   animation: titlemove 1.5s ease forwards;
+   animation-delay: 2s;
+   -webkit-animation-delay: 2s;
+   -o-animation-delay: 2s;
+   opacity: 0;
 }
 
 .title__container h1{
@@ -53,6 +131,18 @@ nav{
    margin-top: 29px;
    color: #79818d;
 }
+
+@keyframes titlemove{
+   from{
+      opacity: 0;
+      margin-left: -500px;
+   }
+   to{
+      opacity: 100%;
+      margin-left: 18%;
+   }
+}
+
 .title__container input{
    height: 40px;
    text-align: center;
@@ -63,6 +153,17 @@ nav{
    font-size: 13px;
    padding: 0px 15px;
    margin: 55px 14px 0px 14px;
+   transition: all 0.1s;
+   transform: scale(1);
+}
+
+.title__container input:hover{
+   color: white;
+   background: #344051;
+}
+
+.title__container input:active{
+   transform: scale(1.1);
 }
 
 .aboutme__container{
@@ -84,6 +185,24 @@ nav{
    height: 4px; 
    margin: 30px auto;
    background-color: #d17700; 
+   -webkit-animation: lineanm 3s infinite;
+   -o-animation: lineanm 3s infinite;
+   animation: lineanm 3s infinite;
+}
+
+@keyframes lineanm{
+   0%{
+      opacity: 0%;
+      transform: scaleX(0);
+   }
+   50%{
+      opacity: 100%;
+      transform: scaleX(1);
+   }
+   100%{
+      opacity: 0%;
+      transform: scaleX(0);
+   }
 }
 
 .aboutme__my-photo{
@@ -249,7 +368,7 @@ nav{
    color: white;
    float: left;
    padding: 15px 42px;
-   margin-left: 185px;
+   margin-left: 375px;
    margin-bottom: 200px;
    text-transform: uppercase;
 }
@@ -273,7 +392,7 @@ nav{
    font-size: 25px;
    color: #1c2534;
    text-align: justify;
-   margin-left: 408px;
+   margin-left: 598px;
    margin-top: 44px;
    margin-bottom: 22px;
 }
@@ -296,7 +415,7 @@ hr {
    font-size: 15px;
    color: black;
    text-align: justify;
-   margin-left: 408px;
+   margin-left: 598px;
    word-spacing: 645px;
 }
 
@@ -307,7 +426,7 @@ hr {
    font-size: 15px;
    color: black;
    text-align: justify;
-   margin-left: 408px;
+   margin-left: 598px;
    word-spacing: 610px;
 }
 
@@ -315,6 +434,8 @@ hr {
    width: 100%;
    background: url(../img/fon_150.jpg) center/cover no-repeat;
    padding-bottom: 90px;
+   background-attachment: fixed;
+
 }
 
 .statistics__container h2 {
@@ -351,23 +472,19 @@ hr {
 }
 
 .icon21 {
-   width: 53px;
-   height: 52px;
+   height: 50px;
 }
 
 .icon22 {
-   width: 63px;
-   height: 47px;
+   height: 50px;
 }
 
 .icon23 {
-   width: 57px;
-   height: 48px;
+   height: 50px;
 }
 
 .icon24 {
-   width: 57px;
-   height: 52px;
+   height: 50px;
 }
 
 .reviews__container {
@@ -439,6 +556,15 @@ hr {
    width: 200px;
 }
 
+#geo{
+   animation: geo 5s infinite linear;
+}
+
+@keyframes geo{ 
+   0% { transform: rotate(0deg); transform-origin: top }
+   100% { transform: rotate(360deg); transform-origin: top }
+}
+
 .contact p {
    font-size: 13px;
    color: #ffffff;
@@ -502,7 +628,7 @@ hr {
    background: url(../img/fb_200.png) center/cover no-repeat;
    width: 16px;
    height: 29px;
-   margin-left: 543px;
+   margin-left: 733px;
 }
 
 .social-icons-twitter {
