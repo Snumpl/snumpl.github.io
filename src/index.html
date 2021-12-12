@@ -11,6 +11,10 @@
 </head>
 
 <body>
+   <div class="preloader">
+      <div class="loader"></div>
+      <div class="text__loader">Загрузка...</div>
+   </div>
    <header>
       <nav>
          <div class="logo">Андрей Браун</div>
@@ -27,210 +31,227 @@
       </nav>
    </header>
    <main>
-   <section class="main">
-      <div class="title__container">
-         <h1>Привет <br>Я Андрей Браун</h1>
-         <p>Фулл стек веб - разработчик и Android - разработчик</p>
-         <input type="button" id="submit1" value="Обо мне">
-         <input type="button" value="Мои работы">
-      </div>
-   </section>
-   <section class="aboutme__container">
-      <h2>Обо мне</h2>
-      <div class="line"></div>
-      <img class="aboutme__my-photo" src="img/foto_103.png" alt="Мое фото">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo
-         nibh ante
-         facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo
-         nibh ante
-         facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+      <section class="main">
+         <div class="title__container">
+            <h1>Привет <br>Я Андрей Браун</h1>
+            <p>Фулл стек веб - разработчик и Android - разработчик</p>
+            <input type="button" id="submit1" value="Обо мне">
+            <input type="button" value="Мои работы">
+         </div>
+      </section>
+      <section class="aboutme__container">
+         <h2>Обо мне</h2>
+         <div class="line"></div>
+         <img class="aboutme__my-photo" src="img/foto_103.png" alt="Мое фото">
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo
+            nibh ante
+            facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo
+            nibh ante
+            facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo nibh.</p>
          <div class="aboutme__submit">
-         <img src="img/ikonka_102.png" alt="*">
-         <input type="submit" value="Скачать резюме">
-      </div>
-   </section>
-   <section class="skills__container">
-      <h2>Что я умею</h2>
-      <div class="line"></div>
-      <div class="skills__item">
-         <div class="skills">
-            <img class="icon1" src="img/nout_82.png" alt="Ноутбук">
-            <h4>Веб-дизайн</h4>
-            <p>Lorem ipsum dolor sit amet placerat
-               facilisis felis mi in tempus eleifend
-               pellentesque natoque etiam.</p>
+            <img src="img/ikonka_102.png" alt="*">
+            <label for="button">Скачать резюме</label>
+            <input type="button" value="">
          </div>
-         <div class="skills">
-            <img class="icon2" src="img/znak_83.png" alt="Скобки">
-            <h4>Разработка</h4>
-            <p>Lorem ipsum dolor sit amet placerat
-               facilisis felis mi in tempus eleifend
-               pellentesque.</p>
-         </div>
-         <div class="skills">
-            <img class="icon3" src="img/raketa_84.png" alt="Ракета">
-            <h4>СЕО-Оптимизация</h4>
-            <p>Lorem ipsum dolor sit amet placerat
-               facilisis felis mi in tempus eleifend
-               pellentesque natoque.</p>
-         </div>
-         <div class="skills">
-            <img class="icon4" src="img/grammofon_85.png" alt="Рупор">
-            <h4>Маркетинг</h4>
-            <p>Lorem ipsum dolor sit amet placerat
-               facilisis felis mi in tempus eleifend
-               pellentesque natoque etiam.</p>
-         </div>
-      </div>
-   </section>
-   <section class="cases__container">
-      <h2>Кейсы</h2>
-      <div class="line"></div>
-      <p class="cases__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus leo nec ornare diamcoccodo nibh ante
-         facilisis.</p>
-      <div class="cases__image">
-         <div class="cases__img">
-            <img src="img/fotka_260.jpg" alt="Пример работы">
-         </div>
-         <div class="client">
-            <div class="cases__client">
-               <h4>Client:</h4>
-               <p>Какая-то компания</p>
-               <h4>Website:</h4>
-               <a href="#" target="_blank">http://www.somedomain.com</a>
+      </section>
+      <section class="skills__container">
+         <h2>Что я умею</h2>
+         <div class="line"></div>
+         <div class="skills__item">
+            <div class="skills">
+               <img class="icon1" src="img/nout_82.png" alt="Ноутбук">
+               <h4>Веб-дизайн</h4>
+               <p>Lorem ipsum dolor sit amet placerat
+                  facilisis felis mi in tempus eleifend
+                  pellentesque natoque etiam.</p>
             </div>
-            <div class="cases__name-project">
-               <h4>Название проекта</h4>
-               <p class="text__name-project">Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod tempor incididunt ut labore et dolore magna
-               aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-               </p>
+            <div class="skills">
+               <img class="icon2" src="img/znak_83.png" alt="Скобки">
+               <h4>Разработка</h4>
+               <p>Lorem ipsum dolor sit amet placerat
+                  facilisis felis mi in tempus eleifend
+                  pellentesque.</p>
+            </div>
+            <div class="skills">
+               <img class="icon3" src="img/raketa_84.png" alt="Ракета">
+               <h4>СЕО-Оптимизация</h4>
+               <p>Lorem ipsum dolor sit amet placerat
+                  facilisis felis mi in tempus eleifend
+                  pellentesque natoque.</p>
+            </div>
+            <div class="skills">
+               <img class="icon4" src="img/grammofon_85.png" alt="Рупор">
+               <h4>Маркетинг</h4>
+               <p>Lorem ipsum dolor sit amet placerat
+                  facilisis felis mi in tempus eleifend
+                  pellentesque natoque etiam.</p>
             </div>
          </div>
-      </div>
-      <input type="submit" value="Visit live site">
-   </section>
-   <section class="cost-calculation__container">
-      <h2>Расчет стоимости</h2>
-      <div class="type-site">
-         <h3>Тип сайта</h3>
-         <select name="type-list" id="type">
-            <option value="">Выберите пункт...</option>
-            <option value="1">Тип1</option>
-            <option value="2">Тип2</option>
-         </select>
-      </div>
-      <div class="design-site">
-         <h3>Дизайн</h3>
-         <select name="design-list" id="design">
-            <option value="">Выберите пункт...</option>
-            <option value="3">Тип1</option>
-            <option value="4">Тип2</option>
-         </select>
-      </div>
-      <div class="adaptability-site">
-         <h3>Адаптивность</h3>
-         <select name="adaptability-list" id="adaptability">
-            <option value="">Выберите пункт...</option>
-            <option value="5">Тип1</option>
-            <option value="6">Тип2</option>
-         </select>
-      </div>
-      <hr>
-      <div class="timing">
-         <p>Сроки 0</p>
-      </div>
-      <div class="cost">
-         <p>Стоимость 0</p>
-      </div>
-   </section>
-   <section class="statistics__container">
-      <h2>Немного статистики</h2>
-      <div class="line"></div>
-      <div class="stats">
-         <div class="stats__item">
-            <img class="icon21" src="img/smayl_157.png" alt="Смайл">
-            <h4>120</h4>
-            <p>Счастливых клиентов</p>
+      </section>
+      <section class="cases__container">
+         <h2>Кейсы</h2>
+         <div class="line"></div>
+         <p class="cases__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus leo nec ornare
+            diamcoccodo nibh ante
+            facilisis.</p>
+         <div class="cases__image">
+            <div class="cases__img">
+               <img src="img/fotka_260.jpg" alt="Пример работы">
+            </div>
+            <div class="client">
+               <div class="cases__client">
+                  <h4>Client:</h4>
+                  <p>Какая-то компания</p>
+                  <h4>Website:</h4>
+                  <a href="#" target="_blank">http://www.somedomain.com</a>
+               </div>
+               <div class="cases__name-project">
+                  <h4>Название проекта</h4>
+                  <p class="text__name-project">Lorem ipsum dolor sit amet, consectetur adipiscing elit., sed do eiusmod
+                     tempor incididunt ut labore et dolore magna
+                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                     commodo consequat.
+                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                     pariatur.
+                  </p>
+               </div>
+            </div>
          </div>
-         <div class="stats__item">
-            <img class="icon22" src="img/skobki_158.png" alt="Скобки">
-            <h4>4,600</h4>
-            <p>Часов работы</p>
+         <input type="submit" value="Visit live site">
+      </section>
+      <section class="cost-calculation__container">
+         <h2>Расчет стоимости</h2>
+         <div class="type-site">
+            <h3>Тип сайта</h3>
+            <select name="type-list" id="type">
+               <option value="">Выберите пункт...</option>
+               <option value="1">Тип1</option>
+               <option value="2">Тип2</option>
+            </select>
          </div>
-         <div class="stats__item">
-            <img class="icon23" src="img/galochka_159.png" alt="Галка">
-            <h4>340</h4>
-            <p>Проектов завершено</p>
+         <div class="design-site">
+            <h3>Дизайн</h3>
+            <select name="design-list" id="design">
+               <option value="">Выберите пункт...</option>
+               <option value="3">Тип1</option>
+               <option value="4">Тип2</option>
+            </select>
          </div>
-         <div class="stats__item">
-            <img class="icon24" src="img/kubok_160.png" alt="Кубок">
-            <h4>23</h4>
-            <p>Наград получено</p>
+         <div class="adaptability-site">
+            <h3>Адаптивность</h3>
+            <select name="adaptability-list" id="adaptability">
+               <option value="">Выберите пункт...</option>
+               <option value="5">Тип1</option>
+               <option value="6">Тип2</option>
+            </select>
          </div>
-      </div>
-   </section>
-   <section class="reviews__container">
-      <h2>Отзывы</h2>
-      <div class="line"></div>
-      <div class="reviews1">
-         <img src="img/fotka_236.png" alt="Фото автора">
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh
-            ante
-            facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p>
-         <address><span>Михаил</span>, Ген директор ПАО “Газпром”.</address>
-      </div>
-   </section>
-   <section class="contacts__container">
-      <h2>Мои контакты</h2>
-      <div class="line"></div>
-      <P class="text__contacts">Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo</P>
-      <div class="contacts__item">
-         <div class="contact">
-            <img id="geo" src="img/geo_195.png" alt="Геометка">
-            <p>Санкт-Петербург <br>
-               Невский проспект 11</p>
+         <hr>
+         <div class="timing">
+            <p>Сроки 0</p>
          </div>
-         <div class="contact">
-            <img src="img/konvert_196.png" alt="Письмо">
-            <p>info@companyname.com</p>
+         <div class="cost">
+            <p>Стоимость 0</p>
          </div>
-         <div class="contact">
-            <img src="img/truba_197.png" alt="Трубка">
-            <p>+7 999 999-99-99</p>
+      </section>
+      <section class="statistics__container">
+         <h2>Немного статистики</h2>
+         <div class="line"></div>
+         <div class="stats">
+            <div class="stats__item">
+               <img class="icon21" src="img/smayl_157.png" alt="Смайл">
+               <h4>120</h4>
+               <p>Счастливых клиентов</p>
+            </div>
+            <div class="stats__item">
+               <img class="icon22" src="img/skobki_158.png" alt="Скобки">
+               <h4>4,600</h4>
+               <p>Часов работы</p>
+            </div>
+            <div class="stats__item">
+               <img class="icon23" src="img/galochka_159.png" alt="Галка">
+               <h4>340</h4>
+               <p>Проектов завершено</p>
+            </div>
+            <div class="stats__item">
+               <img class="icon24" src="img/kubok_160.png" alt="Кубок">
+               <h4>23</h4>
+               <p>Наград получено</p>
+            </div>
          </div>
-      </div>
-      <h3>Отправьте мне сообщение</h3>
-      <div class="message">
-         <Form action="#">
-            <input id="name" type="text" name="text-input" value="" placeholder="Имя">
-            <input id="email" type="email"name="text-input" value="" placeholder="Email">
-            <br>
-            <textarea id="message__field" name="name1" id="1" cols="30" rows="10" placeholder="Сообщение"></textarea>
-            <br>
-            <input id="submit__message" type="submit" value="Отправить">
-         </Form>
-      </div>
-      <div class="social-networks">
-         <ul>
-            <li><a class="social-icons-fasebook" href="https://www.facebook.com/" alt="fasebook" target="_blank"></a></li>
-            <li><a class="social-icons-twitter" href="https://twitter.com/" alt="twitter" target="_blank"></a></li>
-            <li><a class="social-icons-dribbble" href="https://dribbble.com/" alt="dribbble" target="_blank"></a></li>
-            <li><a class="social-icons-github" href="https://github.com/" alt="github" target="_blank"></a></li>
-            <li><a class="social-icons-instagram" href="https://www.instagram.com/" alt="instagram" target="_blank"></a></li>
-            <li><a class="social-icons-LinkedIn" href="https://ru.linkedin.com/" alt="LinkedIn" target="_blank"></a></li>
-         </ul>
-      </div>
-   </section>
-   <section class="maps__conteiner">
-      <iframe src="" frameborder="0">Ваш браузер не поддерживает фреймы!</iframe>
-   </section>
+      </section>
+      <section class="reviews__container">
+         <h2>Отзывы</h2>
+         <div class="line"></div>
+         <div class="reviews1">
+            <img src="img/fotka_236.png" alt="Фото автора">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed
+               commodo nibh
+               ante
+               facilisis bibendum dolor feugiat at duis sed dapidus leo nec ornare diam.</p>
+            <address><span>Михаил</span>, Ген директор ПАО “Газпром”.</address>
+         </div>
+      </section>
+      <section class="contacts__container">
+         <h2>Мои контакты</h2>
+         <div class="line"></div>
+         <P class="text__contacts">Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec
+            ornare diamcoccodo</P>
+         <div class="contacts__item">
+            <div class="contact">
+               <img id="geo" src="img/geo_195.png" alt="Геометка">
+               <p>Санкт-Петербург <br>
+                  Невский проспект 11</p>
+            </div>
+            <div class="contact">
+               <img id="envelope" src="img/konvert_196.png" alt="Письмо">
+               <p>info@companyname.com</p>
+            </div>
+            <div class="contact">
+               <img id="phone" src="img/truba_197.png" alt="Трубка">
+               <p>+7 999 999-99-99</p>
+            </div>
+         </div>
+         <h3>Отправьте мне сообщение</h3>
+         <div class="message">
+            <Form action="#">
+               <input id="name" type="text" name="text-input" value="" placeholder="Имя">
+               <input id="email" type="email" name="text-input" value="" placeholder="Email">
+               <br>
+               <textarea id="message__field" name="name1" id="1" cols="30" rows="10" placeholder="Сообщение"></textarea>
+               <br>
+               <input id="submit__message" type="submit" value="Отправить">
+            </Form>
+         </div>
+         <div class="social-networks">
+            <ul>
+               <li><a class="social-icons-fasebook" href="https://www.facebook.com/" alt="fasebook" target="_blank"></a>
+               </li>
+               <li><a class="social-icons-twitter" href="https://twitter.com/" alt="twitter" target="_blank"></a></li>
+               <li><a class="social-icons-dribbble" href="https://dribbble.com/" alt="dribbble" target="_blank"></a>
+               </li>
+               <li><a class="social-icons-github" href="https://github.com/" alt="github" target="_blank"></a></li>
+               <li><a class="social-icons-instagram" href="https://www.instagram.com/" alt="instagram"
+                     target="_blank"></a></li>
+               <li><a class="social-icons-LinkedIn" href="https://ru.linkedin.com/" alt="LinkedIn" target="_blank"></a>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="maps__conteiner">
+         <iframe src="" frameborder="0">Ваш браузер не поддерживает фреймы!</iframe>
+      </section>
    </main>
    <footer>
       <div class="avtor__container">
          Copyright © 2021 Андрей Браун. Design by Web
       </div>
    </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+	$(window).load(function() {
+		$('.preloader').find('i').fadeOut().end().delay(400).fadeOut('slow');
+	});
+</script>
 </body>
 </html>

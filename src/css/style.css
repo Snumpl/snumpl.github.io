@@ -1,10 +1,52 @@
 body{
    font-family: Arial, sans-serif;
+   height: 100%;
+   width: 100%;
+}
+
+.preloader {
+   position: fixed;
+   height: 100%;
+   width: 100%;
+   background-color: blueviolet;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1001;
+}
+
+.loader {
+   position: relative;
+   width: 90px;
+   height: 90px;
+   border: 5px solid blue;
+   border-radius: 50%;
+   border-left:7px solid blue;
+   border-right:7px solid blue;
+   border-bottom:7px solid yellow;
+   border-top:7px solid yellow;
+   animation: loader 4s infinite linear;
+   -moz-animation: loader 4s infinite linear;
+   -o-animation: loader 4s infinite linear;
+}
+
+@keyframes loader {
+   0%{ 
+      transform: rotate(0deg);
+   }
+   100%{
+     transform: rotate(360deg);
+   }
+}
+
+.text__loader {
+   color: blue;
+   font-size: 30px;
+   padding-left: 40px;
 }
 
 main {
-   width: 100%;
-   height: 100%;
+   
 }
 
 nav{
@@ -103,7 +145,7 @@ nav{
 }
 .main{
    width: 100%;
-   height: 100%;
+   height: 1019px;
    background:url(../img/paren_117.png) 90% 100%/auto 95% no-repeat ,url(../img/fon_115.jpg) center/cover no-repeat;
 }
 
@@ -242,6 +284,20 @@ nav{
    float: left;
 }
 
+.aboutme__submit:hover{
+   color: white;
+   background: #898c8f;
+}
+
+.aboutme__submit input:hover{
+   color: white;
+   background: #898c8f;
+}
+
+.aboutme__submit:active{
+   transform: scale(1.1);
+}
+
 .skills__container {
    float: left;
    width: 100%;
@@ -373,6 +429,15 @@ nav{
    text-transform: uppercase;
 }
 
+.cases__container input:hover{
+   color: #573201;
+   background-color: rgb(240, 160, 104);
+}
+
+.cases__container input:active{
+   transform: scale(1.1);
+}
+
 .cost-calculation__container {
    background-color: white;
    text-align: center;
@@ -404,10 +469,33 @@ nav{
 }
 
 hr {
-   background:#d1d1d1;
    width: 710px;
-   height: 2px;
+   height: 4px;
    margin: 30px auto;
+   position: relative;
+    overflow: visible;
+}
+
+hr:after {
+   content: "";
+   border: 2px solid #337AB7;
+   position: absolute;
+   width: 20%;
+   top: -2px;
+   -moz-animation: hr 5s linear infinite;
+   -o-animation: hr 5s linear infinite;
+   animation: hr 5s linear infinite; 
+}
+@keyframes hr {
+   0% {
+       left: 0%;
+   }
+   50% {
+       left: 80%;
+   }
+   100% {
+      left: 0%;
+   }
 }
 
 .timing {
@@ -557,12 +645,52 @@ hr {
 }
 
 #geo{
+   -moz-animation: geo 5s infinite linear;
+   -o-animation: geo 5s infinite linear;
    animation: geo 5s infinite linear;
 }
 
 @keyframes geo{ 
    0% { transform: rotate(0deg); transform-origin: top }
    100% { transform: rotate(360deg); transform-origin: top }
+}
+
+#envelope{
+   -moz-animation: envelope infinite 1.5s;
+   -o-animation: envelope infinite 1.5s;
+   animation: envelope infinite 1.5s;
+}
+
+@keyframes envelope {
+	0%, 20%, 60%, 100% {
+		transform: translateY(0);
+		
+	}
+	40% {
+		transform: translateY(-20px);
+		
+	}
+	80% {
+		transform: translateY(-10px);
+	}
+} 
+
+#phone {
+   -moz-animation: phone infinite 1.5s;
+   -o-animation: phone infinite 1.5s;
+   animation: phone infinite 1.5s;
+}
+
+@keyframes phone {
+   0%, 50%, 100% {
+      transform: rotate(0deg);
+  }
+  10%, 30% {
+      transform: rotate(-10deg);
+  }
+  20%, 40% {
+      transform: rotate(10deg);
+  }
 }
 
 .contact p {
@@ -611,6 +739,16 @@ hr {
    font-size: 20px;
    background: none;
 }
+
+#submit__message:hover{
+   color: black;
+   background-color: white;
+}
+
+#submit__message:active{
+   transform: scale(1.1);
+}
+
 
 .social-networks {
    padding-top: 75px;
@@ -664,6 +802,14 @@ hr {
    background: url(../img/in_205.png) center/cover no-repeat;
    width: 27px;
    height: 26px;
+}
+
+.social-networks a:hover{
+   transform: scale(1.7);
+}
+
+.social-networks a:active{
+   transform: scale(1.2);
 }
 
 .maps__conteiner {
