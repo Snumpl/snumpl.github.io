@@ -1,7 +1,16 @@
-body{
-   font-family: Arial, sans-serif;
-   height: 100%;
-   width: 100%;
+@font-face {
+   font-family: 'FranklinGot';
+   src: local('ITC Franklin Gothic Medium'), local('ITC-Franklin-Gothic-Medium'),
+       url('../fonts/ITCFranklinGothicStd-Med.woff2') format('woff2'),
+       url('../fonts/ITCFranklinGothicStd-Med.woff') format('woff'),
+       url('../fonts/ITCFranklinGothicStd-Med.ttf') format('truetype');
+   font-weight: 500;
+   font-style: normal;
+ }
+
+
+body {
+   
 }
 
 .preloader {
@@ -12,7 +21,7 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
-   z-index: 1001;
+   z-index: 2001;
 }
 
 .loader {
@@ -45,27 +54,34 @@ body{
    padding-left: 40px;
 }
 
-main {
-   
+ .main__container {
+   display: flex;
+   flex-direction: column;
+   max-width: 100%;
+   flex: 1 1 auto;
 }
-
-nav{
-   width: 100%;
-   height: 60px;
-   background: #344051;
+.header {
+   background-color: #344051;
    position: fixed;
+   width: 100%;
+   z-index: 1001;
 }
-
-.logo{
+.container {
+   max-width: 1169px;
+   margin: 0 auto;
+}
+.nav__flex {
+   display: flex;
+   justify-content: space-between;
+   line-height: 60px;
+}
+.logo {
+   font-family: 'FranklinGot', sans-serif;
    color: #fff;
    font-size: 23px;
-   line-height: 60px;
-   padding-left: 387px;
-   float: left;
    -webkit-animation: comming 2s;
    -o-animation: comming 2s;
    animation: comming 2s;
-   
 }
 
 @keyframes comming{
@@ -77,17 +93,9 @@ nav{
    }
 }
 
-.menu{
-   float: left;
-   padding-left: 432px;
-}
-
 .menu li{
-   float: left;
-   font-size: 12px;
-   line-height: 60px;
-   margin-right: 40px;
-   color: #fff;
+   display: inline-block;
+   margin: 0px 34px 0px 0px;
    text-transform: uppercase;
    -webkit-animation: topshift 0.4s forwards;
    -o-animation: topshift 0.4s forwards;
@@ -95,32 +103,13 @@ nav{
    opacity: 0;
 }
 
-.menu li a{
-   transition: all 0.1s;
-   color: white;
-   display: inline-block;
-}
-
-.menu li a:visited{
-   color: white;
-}
-
-.menu li a:hover{
-   color: #d17700;
-}
-
-.menu li a:active{
-   transform: scale(1.1);
-}
-
 @keyframes topshift{
    from{
       opacity: 0;
-      margin-top: -80px;
    }
    to{
       opacity: 100%;
-      margin-top: 0px;
+      transform: rotate(360deg);
    }
 }
 
@@ -143,86 +132,139 @@ nav{
 .menu li:nth-child(6){
    animation-delay: 2s;
 }
-.main{
-   width: 100%;
-   height: 1019px;
-   background:url(../img/paren_117.png) 90% 100%/auto 95% no-repeat ,url(../img/fon_115.jpg) center/cover no-repeat;
+
+.menu li a:visited{
+   color: white;
 }
 
-.title__container{
-   float: left;
-   margin: 17% 0% 0% 18%;
-   color: #2c384a;
+.menu li a:hover{
+   color: #d17700;
+}
+
+.menu li a:active{
+   transform: scale(1.2);
+}
+
+.menu li a{
+   transition: all 0.1s;
+   color: white;
+   font-family: 'FranklinGot', sans-serif;
+   color: #fff;
+   font-size: 17px;
+}
+
+#menu {
+   display: none;
+}
+
+@media (max-width: 1010px ) {
+   .menu li {
+      display: none;
+   }
+   #menu {
+      display: block;
+      margin: 20px 15px 20px 0px;
+      font-size: 17px;
+      background-color: #344051;
+      color: #d17700;
+      text-transform: uppercase;
+      font-family: 'FranklinGot', sans-serif;
+   }
+   .logo {
+      margin-left: 10%;
+   }
+}
+
+.main {
+   background:url(../img/paren_117.png) 90% 100%/auto 85% no-repeat ,url(../img/fon_115.jpg) center/cover no-repeat;
+   height: 100vh;
+   padding: 0px 0px 108px 0px;
+   margin-top: 60px;
+}
+.main__flex {
+   display: flex;
+}
+.main__text {
+   padding: 300px 0px 0px 0px;
    text-align: center;
-   -webkit-animation: titlemove 1.5s ease forwards;
-   -o-animation: titlemove 1.5s ease forwards;
-   animation: titlemove 1.5s ease forwards;
-   animation-delay: 2s;
-   -webkit-animation-delay: 2s;
-   -o-animation-delay: 2s;
-   opacity: 0;
+
 }
 
-.title__container h1{
-   font-size: 60px;
+.main__text h1{
+   font-family: 'FranklinGot', sans-serif;
+   font-size: 70px;
    font-weight: bold;
-}
-
-.title__container p{
-   font-size: 20px;
-   margin-top: 29px;
-   color: #79818d;
-}
-
-@keyframes titlemove{
-   from{
-      opacity: 0;
-      margin-left: -500px;
-   }
-   to{
-      opacity: 100%;
-      margin-left: 18%;
-   }
-}
-
-.title__container input{
-   height: 40px;
+   margin-bottom: 29px;
    text-align: center;
+   color: #2c384a;
+}
+.main__text p{
+   font-size: 20px;
+   font-family: 'FranklinGot', sans-serif;
+   color: #79818d;
+   margin-bottom: 55px;
+   text-align: center;
+}
+
+.main__text input{
+   font-family: 'FranklinGot', sans-serif;
+   height: 40px;
    border: 2px solid #6d7682;
    background: none;
+   margin-right: 27px;
    border-radius: 5px;
-   color: 6d7682;
-   font-size: 13px;
+   color: #6d7682;
+   font-size: 18px;
    padding: 0px 15px;
-   margin: 55px 14px 0px 14px;
    transition: all 0.1s;
    transform: scale(1);
 }
 
-.title__container input:hover{
+.main__text input:hover{
    color: white;
    background: #344051;
 }
 
-.title__container input:active{
+.main__text input:active{
    transform: scale(1.1);
 }
 
-.aboutme__container{
-   width: 100%;
-   background: #fff;
-   float: left;
+@media (max-width: 1105px ) {
+   .main__text {
+      margin: 0px auto;
+      padding-top: 35%;
+      min-height: 568px;
+   }
+
+   .main__text p{
+      color: #fff;
+   }
+   .main__text h1{
+      color: #fff;
+   }
+   .main__text input{
+      border-color: #fff;
+      color: #fff;
+   }
+   .main__text {
+      background: #202020;
+      opacity: 0.8;
+      height: 100vh;
+      width: 100%;
+   }
+   .header{
+      z-index: 1001;
+   }
 }
 
-.aboutme__container h2{
-   font-weight: bold;
-   text-align: center;
-   margin-top: 108px;
-   font-size: 33px;
-   color: #263244;
+.aboutme {
 }
-
-.line{
+.aboutme__flex {
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+}
+.line {
    width: 72px; 
    height: 4px; 
    margin: 30px auto;
@@ -246,21 +288,9 @@ nav{
       transform: scaleX(0);
    }
 }
-
-.aboutme__my-photo{
-   display: block;
-   margin: 59px auto 22px auto;
+.aboutme__my-photo {
+   margin: 40px auto 22px auto;
 }
-
-.aboutme__container p{
-   text-align: left;
-   width: 736px;
-   margin: 0px auto;
-   margin-bottom: 10px;
-   font-size: 17px;
-   color: #3f495a;
-}
-
 .aboutme__submit {
    width: 154px;
    height: 34px;
@@ -271,6 +301,7 @@ nav{
    border: 2px solid #6f707e;
    border-radius: 6px;
 }
+
 .aboutme__submit img {
    width: 15px;
    height: 14px;
@@ -289,33 +320,84 @@ nav{
    background: #898c8f;
 }
 
-.aboutme__submit input:hover{
-   color: white;
-   background: #898c8f;
-}
-
 .aboutme__submit:active{
    transform: scale(1.1);
 }
 
-.skills__container {
-   float: left;
-   width: 100%;
-   background: url(../img/kartinka_fona_60.jpg) center/cover no-repeat;
+.aboutme p{
+   text-align: left;
+   max-width: 836px;
+   min-width: 250px;
+   padding: 0px 15px 0px 15px;
+   margin: 0px auto;
+   margin-bottom: 10px;
+   font-size: 17px;
+   color: #3f495a;
+   font-family: 'calibri', sans-serif;
 }
 
-.skills__container h2 {
+.aboutme h2{
+   font-weight: bold;
+   text-align: center;
+   margin-top: 108px;
+   font-size: 33px;
+   color: #263244;
+   font-family: 'FranklinGot', sans-serif;
+}
+
+.skill {
+   background: url(../img/kartinka_fona_60.jpg) fixed center/cover no-repeat;
+}
+.skills__flex {
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+}
+.skills__item {
+   display: flex;
+   margin: 0 auto;
+   max-width: 1169px;
+}
+
+
+.skill h2 {
    font-weight: bold;
    text-align: center;
    font-size: 33px;
    color: #263244;
    margin-top: 107px;
+   font-family: 'FranklinGot', sans-serif;
 }
 
 .skills__item {
    display: flex;
+   flex-direction: row;
    justify-content: center;
    margin-top: 100px;
+   padding: 0px 10px;
+}
+
+.skills {
+   margin-bottom: 92px;
+   margin-right: 40px;
+   text-align: center;
+}
+
+@media (max-width: 750px){
+   .skills__item {
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+   }
+
+   .skills__item{
+      margin-right: 0px;
+      margin-left: 0px;
+   }
+
+   .skills {
+      margin-right: 0px;
+   }
 }
 
 .icon1 {
@@ -339,12 +421,9 @@ nav{
    height: 44px;
 }
 
-.skills {
-   margin-bottom: 92px;
-   width: 240px;
-   margin-right: 40px;
-   text-align: center;
-}
+.skills:last-child {
+   margin-right: 0px;
+ }
 
 .skills h4 {
    margin-top: 34px;
@@ -352,25 +431,30 @@ nav{
    border: 1px solid rgba(255,255,255,0.18);
    font-size: 18px;
    color: #cf7600;
+   font-family: 'FranklinGot', sans-serif;
 }
 
 .skills p {
    font-size: 16px;
    color: #3f495a; 
+   font-family: 'calibri', sans-serif;
 }
 
-.cases__container {
-   background: white;
-   width: 100%;
-   float: left;
+.cases {
+}
+.cases__flex {
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
 }
 
-.cases__container h2 {
+.cases h2 {
    font-weight: bold;
    text-align: center;
    font-size: 33px;
    color: #384354;
    margin-top: 103px;
+   font-family: 'FranklinGot', sans-serif;
 }
 
 .cases__text {
@@ -378,29 +462,51 @@ nav{
    font-size: 16px;
    color: #3f495a;
    margin: 35px 0px;
+   font-family: 'calibri', sans-serif;
 }
 
 .cases__img {
    text-align: center;
+   
+}
+
+@media (max-width: 1220px) {
+   .cases__img img{ 
+      max-width: 95%;
+      max-height: 95%;
+   }
+   .cases__text {
+      padding: 0px 20px;
+   }
+   .cases h2 {
+      margin-top: 70px;
+   }
 }
 
 .client {
    display: flex;
-   justify-content: center;
-   margin: 35px auto;
+   flex-direction: row;
+   padding: 0px 20px;
+   margin-bottom: 100px;
 }
+.cases__client {
+   display: flex;
+   flex-direction: column;
+   margin-right: 80px;
+}
+
 .cases__client h4{
    font-size: 20px;
    color: #384354;
    margin-top: 11px;
    margin-bottom: 11px;
-   margin-right: 150px;
+   font-family: 'FranklinGot', sans-serif;
 }
 
 .cases__client p {
    font-size: 15px;
    color: #3f495a;
-   text-align: left;
+   font-family: 'calibri', sans-serif;
 }
 
 .cases__name-project h4{
@@ -408,15 +514,16 @@ nav{
    color: #384354;
    margin-top: 11px;
    margin-bottom: 11px;
+   font-family: 'FranklinGot', sans-serif;
 }
 
 .text__name-project {
    font-size: 15px;
    color: #3f495a;
-   width: 920px;
+   font-family: 'calibri', sans-serif;
 }
 
-.cases__container input{
+.cases__client input{
    background: #63b5ae;
    border: 1px solid #63b5ae;
    border-radius: 5px;
@@ -424,52 +531,71 @@ nav{
    color: white;
    float: left;
    padding: 15px 42px;
-   margin-left: 375px;
-   margin-bottom: 200px;
    text-transform: uppercase;
+   margin-top: 22px;
 }
 
-.cases__container input:hover{
+.cases__client input:hover{
    color: #573201;
    background-color: rgb(240, 160, 104);
 }
 
-.cases__container input:active{
+.cases__client input:active{
    transform: scale(1.1);
 }
 
-.cost-calculation__container {
-   background-color: white;
+@media (max-width: 1024px) {
+   .client {
+      flex-direction: column-reverse;
+      margin-bottom: 50px;
+   }
+   .cases__client {
+      margin-right: 0px;
+   }
+   .client h4, a, p{
+      text-align: center;
+   }
+}
+
+.cost-calculation {
+}
+.cost_calculation__flex {
+   display: flex;
+   flex-direction: column;
    text-align: center;
 }
 
-.cost-calculation__container h2 {
+.cost-calculation h2 {
    font-weight: bold;
    font-size: 45px;
    color: #1c2534;
    margin-bottom: 54px;
    text-align: center;
+   font-family: 'FranklinGot', sans-serif;
 }
 
-.cost-calculation__container h3 {
+.cost-calculation h3 {
    font-weight: bold;
    text-transform: uppercase;
    font-size: 25px;
    color: #1c2534;
+   margin-left: 20%;
    text-align: justify;
-   margin-left: 598px;
    margin-top: 44px;
    margin-bottom: 22px;
+   font-family: 'FranklinGot', sans-serif;
 }
 
-.cost-calculation__container select {
+.cost-calculation select {
    background: #eeeeee;
    width: 711px;
    height: 57px;
 }
 
+
+
 hr {
-   width: 710px;
+   width: 66%;
    height: 4px;
    margin: 30px auto;
    position: relative;
@@ -498,13 +624,31 @@ hr:after {
    }
 }
 
+@media (max-width: 1170px){
+   .cost-calculation h3 {
+      text-align: center;
+      margin-left: 0;
+   }
+   hr {
+      width: 62%;
+   }
+}
+
+@media (max-width: 740px){
+   .cost-calculation select {
+      max-width: 70%;
+   }
+   hr {
+      width: 67%;
+   }
+}
+
 .timing {
    font-weight: bold;
    font-size: 15px;
    color: black;
-   text-align: justify;
-   margin-left: 598px;
-   word-spacing: 645px;
+   text-align: center;
+   word-spacing: 647px;
 }
 
 .cost {
@@ -513,25 +657,51 @@ hr:after {
    font-weight: bold;
    font-size: 15px;
    color: black;
-   text-align: justify;
-   margin-left: 598px;
-   word-spacing: 610px;
+   text-align: center;
+   word-spacing: 618px;
 }
 
-.statistics__container {
-   width: 100%;
+@media (max-width: 750px){
+   .timing {
+      word-spacing: 230px;
+   }
+   .cost {
+      word-spacing: 200px;
+   }
+}
+
+@media (max-width: 424px){
+   .timing {
+      word-spacing: 200px;
+   }
+   .cost {
+      word-spacing: 170px;
+   }
+}
+
+@media (max-width: 330px){
+   .timing {
+      word-spacing: 165px;
+   }
+   .cost {
+      word-spacing: 135px;
+   }
+}
+
+.statistics{
    background: url(../img/fon_150.jpg) center/cover no-repeat;
    padding-bottom: 90px;
+   margin-bottom: 90px;
    background-attachment: fixed;
-
 }
 
-.statistics__container h2 {
+.statistics h2 {
    font-weight: bold;
    font-size: 33px;
    color: #323e4f;
    text-align: center;
    padding-top: 103px;
+   font-family: 'FranklinGot', sans-serif;
 }
 
 .stats {
@@ -551,12 +721,14 @@ hr:after {
    color: #323e4f;
    margin-top: 34px;
    margin-bottom: 42px;
+   font-family: 'FranklinGot', sans-serif;
 }
 
 .stats__item p {
    font-weight: bold;
    font-size: 16px;
    color: #616a78;
+   font-family: 'calibri', sans-serif;
 }
 
 .icon21 {
@@ -575,17 +747,34 @@ hr:after {
    height: 50px;
 }
 
-.reviews__container {
-   width: 100%;
-   margin-top: 117px;
-   margin-bottom: 180px;
+@media (max-width: 630px) {
+   .stats {
+      flex-direction: column;
+   }
+   .stats__item {
+      padding-bottom: 30px;
+      margin: 0px auto;
+   }
+   .stats__item h4{
+      margin-bottom: 30px;
+   }
 }
 
-.reviews__container h2 {
+.reviews{
+   margin-bottom: 90px;
+}
+
+.reviews__flex{
+   display: flex;
+   flex-direction: column;
+}
+
+.reviews h2 {
    text-align: center;
    font-size: 33px;
    color: #243042;
    font-weight: bold;
+   font-family: 'FranklinGot', sans-serif;
 }
 
 .reviews1 img {
@@ -595,9 +784,10 @@ hr:after {
 
 .reviews1 p {
    text-align: center;
-   width: 687px;
+   max-width: 687px;
    margin: 33px auto;
    color: #243042;
+   font-family: 'calibri', sans-serif;
 }
 
 .reviews1 address {
@@ -605,7 +795,7 @@ hr:after {
    color: #243042;
    font-weight: 400;
    text-align: center;
-   width: 687px;
+   max-width: 687px;
    margin: 33px auto;
 }
 
@@ -613,12 +803,17 @@ hr:after {
    font-weight: bold;
 }
 
-.contacts__container {
+.contacts__flex{
+   display: flex;
+   flex-direction: column;
+}
+
+.contacts {
    padding-bottom: 66px;
    background: url(../img/fon_180.jpg) center/cover no-repeat;
 }
 
-.contacts__container h2 {
+.contacts h2 {
    padding-top: 105px;
    text-align: center;
    font-size: 33px;
@@ -698,7 +893,7 @@ hr:after {
    color: #ffffff;
 }
 
-.contacts__container h3 {
+.contacts h3 {
    font-weight: bold;
    font-size: 20px;
    color: #ffffff;
@@ -711,16 +906,22 @@ hr:after {
    margin: 43px auto 28px auto;
 }
 
+.message form{
+   
+}
+
 #name {
    width: 352px;
    height: 34px;
    margin-right: 25px;
    margin-bottom: 14px;
+   font-family: 'FranklinGot', sans-serif;
 }
 
 #email {
    width: 352px;
    height: 34px;
+   font-family: 'FranklinGot', sans-serif;
 }
 
 #message__field {
@@ -728,6 +929,43 @@ hr:after {
    margin-bottom: 28px;
    width: 733px;
    height: 94px;
+   font-family: 'FranklinGot', sans-serif;
+}
+
+@media (max-width: 768px){
+
+   #name {
+      width: 240px;
+      margin-right: 20px;
+   }
+
+   #email {
+      width: 240px;
+   }
+
+   #message__field {
+      width: 500px;
+   }
+}
+
+@media (max-width: 520px){
+   #name {
+      display: block;
+      margin: 25px auto;
+      width: 300px;
+   }
+   #email {
+      display: block;
+      margin: 0 auto;
+      width: 300px;
+   }
+   #message__field {
+      margin-top: 20px;
+      width: 300px;
+   }
+   .contacts h3{
+      margin-bottom: 10px;
+   }
 }
 
 #submit__message {
@@ -752,13 +990,19 @@ hr:after {
 
 .social-networks {
    padding-top: 75px;
+   margin: 0 auto;
    margin-bottom: 30px;
 }
 
 .social-networks li{
-   float: left;
-   display: block;
-   margin-right: 58px;
+   display: inline-block;
+   margin-right: 55px;
+}
+
+@media (max-width: 530px) {
+   .social-networks li{
+      margin-right: 25px;
+   }
 }
 
 .social-icons-fasebook {
@@ -766,7 +1010,6 @@ hr:after {
    background: url(../img/fb_200.png) center/cover no-repeat;
    width: 16px;
    height: 29px;
-   margin-left: 733px;
 }
 
 .social-icons-twitter {
@@ -814,7 +1057,7 @@ hr:after {
 
 .maps__conteiner {
    height: 350px;
-   background: url(../img/karta_kopiya_142.jpg) no-repeat;
+   background: url(../img/karta_kopiya_142.jpg) center/cover no-repeat;
 }
 
 footer {
