@@ -36,7 +36,7 @@ body {
    border-top:7px solid yellow;
    animation: loader 4s infinite linear;
    -moz-animation: loader 4s infinite linear;
-   -o-animation: loader 4s infinite linear;
+   -o-animation: loader infinite linear;
 }
 
 @keyframes loader {
@@ -70,11 +70,13 @@ body {
    max-width: 1169px;
    margin: 0 auto;
 }
+
 .nav__flex {
    display: flex;
    justify-content: space-between;
    line-height: 60px;
 }
+
 .logo {
    font-family: 'FranklinGot', sans-serif;
    color: #fff;
@@ -101,6 +103,10 @@ body {
    -o-animation: topshift 0.4s forwards;
    animation: topshift 0.4s forwards;
    opacity: 0;
+}
+
+.menu li a{
+   display: inline-block;
 }
 
 @keyframes topshift{
@@ -442,6 +448,7 @@ body {
 
 .cases {
 }
+
 .cases__flex {
    display: flex;
    flex-direction: column;
@@ -559,6 +566,7 @@ body {
 
 .cost-calculation {
 }
+
 .cost_calculation__flex {
    display: flex;
    flex-direction: column;
